@@ -1,0 +1,26 @@
+<p>Listado de Héroes</p>
+<!-- *ngIf esconde el modulo si no se cumple una condicion -->
+<div *ngIf="heroeBorrado; else noBorrado"> <!--noBorrado afecta el ng-template. si no se cumple se muestra el ng-template   -->
+    <h3>Héroe Borrado = <small >
+        {{ heroeBorrado }}
+    </small>
+    </h3>       
+</div>
+<!-- referencias locales  ng-template  generalmente van del lado del template-->
+<ng-template #noBorrado>
+    <h3>No ha borrado nada</h3>
+</ng-template>
+
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+
+<ul>
+    <!-- *ngFor muestra los elementos que hay en el arreglo, enviar algo iterable -->
+    <li *ngFor="let heroe of heroes, let i = index">
+        {{ i }} - {{ heroe}}
+    </li>
+</ul>
+
+
+
