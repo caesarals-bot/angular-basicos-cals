@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 // import { ContadorComponent } from './accountant/accountant/contador.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { AccountantModule } from './accountant/accountant.module';
-
+import { DbzModule } from './dbz/dbz.module';
 
 
 
@@ -22,7 +22,8 @@ import { AccountantModule } from './accountant/accountant.module';
   imports: [
     BrowserModule,
     HeroesModule,
-    AccountantModule
+    AccountantModule,
+    DbzModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
